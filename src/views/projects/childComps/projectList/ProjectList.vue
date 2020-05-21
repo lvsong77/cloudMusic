@@ -29,9 +29,14 @@
       goto(path) {
         if (path === 'discoveryOrlogin') {
           getLoginStatus().then(res => {
+          console.log("goto -> res", res)
             let path
-            if (res.code === 200) {
-              path = '/projects/cloud_music/discovery'
+            if (res !== undefined) {
+              if (res.code === 200) {
+                path = '/projects/cloud_music/discovery'
+              } else {
+                path = '/projects/cloud_music/login'
+              }
             } else {
               path = '/projects/cloud_music/login'
             }
