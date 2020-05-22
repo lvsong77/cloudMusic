@@ -26,7 +26,7 @@
         banners: []
       }
     },
-    mounted () {
+    created() {
       let type = 1
       if (judgeCurrentDivice() == 'pc') {
         type = 0

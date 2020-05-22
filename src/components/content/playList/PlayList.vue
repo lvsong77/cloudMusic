@@ -1,6 +1,6 @@
 <template>
   <div class="playList">
-    <div class="playAll">
+    <div class="playAll" @click="playAll">
       <i class="iconfont icon-bofang"></i>
       <span>播放全部</span>
     </div>
@@ -65,6 +65,16 @@
 
         // 更新当前播放音乐
         this.changeMusic(song)
+      },
+      playAll() {
+        console.log(this.playList.list);
+        // if (this.playList.list !== undefined) {
+        //   console.log("playAll -> this.playList.list", this.playList.list)
+        //   let song = this.playList.list[0]
+        //   this.clickListItem(song)
+        // } else {
+          
+        // }
       }
     },
     computed: {
@@ -94,5 +104,8 @@
   .playAll i {
     margin-right: 1.5vw;
     font-size: 150%;
+  }
+  .content {
+    height: calc(100% - 30px);
   }
 </style>

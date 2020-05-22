@@ -18,23 +18,27 @@
           {
             icon: 'icon-RectangleCopy',
             text: '每日推荐',
-            path: 'daily_songs'
+            path: '/daily_songs'
           },
           {
             icon: 'icon-SongListgedan',
-            text: '歌单',            
+            text: '歌单',
+            path: ''
           },
           {
             icon: 'icon-PCbofangye_paihangbang',
             text: '排行榜',
+            path: ''
           },
           {
             icon: 'icon-guangdie',
             text: '电台',
+            path: ''
           },
           {
             icon: 'icon-zhibohuifang',
             text: '直播',
+            path: ''
           },
         ]
       }

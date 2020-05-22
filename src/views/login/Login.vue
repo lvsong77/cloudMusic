@@ -66,12 +66,13 @@
             return
           }
           if (res.code === 200) {
+            localStorage.userInfo = JSON.stringify(res)
             this.$toast({
               message: '登陆成功',
               position: 'bottom',
               duration: 1000
             })
-            this.$router.replace('/projects/cloud_music/discovery')
+            this.$router.replace('/discovery')
           } else if (res.code === 502) {
             this.$toast({
               message: res.msg,

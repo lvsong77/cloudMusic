@@ -7,7 +7,7 @@
 
 <script>
   import DailySongsNavBar from './DailySongsNavBar'
-  import PlayList from 'views/projects/cloudMusic/components/content/playList/PlayList'
+  import PlayList from 'components/content/playList/PlayList'
 
   import { getDailyRecommendSongs } from 'network/cloudMusic'
 

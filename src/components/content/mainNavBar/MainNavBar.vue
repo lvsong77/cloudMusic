@@ -54,7 +54,7 @@
       clickTitle(e) {
         let path = e.target.dataset.path
         if (this.$route.fullPath.indexOf(path) === -1) {
-          this.$router.replace(`/projects/cloud_music/${path}`)          
+          this.$router.replace(`${path}`)          
         }
       }
     },
@@ -67,8 +67,10 @@
   }
 
   .navBarTitle {
+    width: 60vw;
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
     font-size: 0.8rem;
     color: #757575;
   }
