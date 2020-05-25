@@ -22,7 +22,8 @@
           },
           {
             icon: 'icon-SongListgedan',
-            text: '歌单',            
+            text: '歌单',
+            path: 'song-sheet'         
           },
           {
             icon: 'icon-PCbofangye_paihangbang',

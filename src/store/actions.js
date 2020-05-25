@@ -1,4 +1,4 @@
-import { getSongUrl } from 'network/cloudMusic'
+import cRq from 'network/cloudMusic'
 
 export default {
   replacePlayList(context, payload) {
@@ -8,9 +8,10 @@ export default {
     })
   },
   changeMusic(context, payload) {
+    console.log()
     return new Promise((resolve, reject) => {
       let id = payload.id
-      getSongUrl({id}).then(res => {
+      cRq.getSongUrl({id}).then(res => {
         payload.url = res.data[0].url
         context.commit('changeMusic', payload)
       })

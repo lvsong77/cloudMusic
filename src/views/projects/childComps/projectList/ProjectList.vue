@@ -7,7 +7,7 @@
 <script>
   import ProjectItem from '../projectItem/ProjectItem'
 
-  import { getLoginStatus } from 'network/cloudMusic'
+  // import { getLoginStatus } from 'network/cloudMusic'
 
   export default {
     name: 'ProjectsList',
@@ -28,7 +28,7 @@
     methods: {
       goto(path) {
         if (path === 'discoveryOrlogin') {
-          getLoginStatus().then(res => {
+          this.$request.getLoginStatus().then(res => {
             let path
             if (res.code === 200) {
               path = '/projects/cloud_music/discovery'

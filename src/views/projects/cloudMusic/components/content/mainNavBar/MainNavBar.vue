@@ -61,7 +61,10 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+/deep/ .van-nav-bar__title{
+  width: 60%;
+}
   .van-nav-bar .van-icon {
     color: #424242;
   }

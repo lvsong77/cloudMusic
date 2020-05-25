@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import { cloudMusicLogin } from 'network/cloudMusic.js'
+  // import { cloudMusicLogin } from 'network/cloudMusic.js'
 
   import { checkPhone } from 'common/utils'
 
@@ -55,7 +55,7 @@
         let password = this.password
         
         let params = { phone, password }
-        cloudMusicLogin(params).then(res => {
+        this.$request.cloudMusicLogin(params).then(res => {
           console.log(res);
           if (res === undefined) {
             this.$toast({
@@ -71,7 +71,8 @@
               position: 'bottom',
               duration: 1000
             })
-            this.$router.replace('/projects/cloud_music/discovery')
+
+            // this.$router.replace('/projects/cloud_music/discovery')
           } else if (res.code === 502) {
             this.$toast({
               message: res.msg,

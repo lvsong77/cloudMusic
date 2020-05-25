@@ -3,18 +3,29 @@
     <keep-alive>
       <router-view/>
     </keep-alive>
-    <main-tab-bar v-if="$route.meta.showTab"/>
+      <!--<main-tab-bar v-if="$route.meta.showTab"/> -->
+    <!-- <login></login> -->
   </div>
 </template>
 
 <script>
-  import MainTabBar from 'components/content/mainTabBar/MainTabBar'
 
   export default {
     name: 'App',
-    components: {
-      MainTabBar,
+    mounted(){
+      // this.isLogin()
     },
+    methods:{
+      isLogin(){
+        // this.$request.getLoginStatus().then( res => {
+        //   console.log(res)
+        //   if(res){
+        //   }else{
+        //     this.$router.replace('/projects/cloud_music/login')
+        //   }
+        // })
+      }
+    }
   }
 </script>
 

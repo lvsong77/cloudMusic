@@ -7,7 +7,7 @@ import store from './store'
 import 'assets/iconfont/iconfont.css'
 
 // 按需引入vant组件
-import { Icon, Toast, Tabbar, TabbarItem, Form, Field, Button, Swipe, SwipeItem, NavBar, Circle } from 'vant'
+import { Icon, Toast, Tabbar, TabbarItem, Form, Field, Button, Swipe, SwipeItem, NavBar, Circle ,Tab, Tabs} from 'vant'
 
 Vue.use(Icon);
 Vue.use(Toast);
@@ -20,6 +20,11 @@ Vue.use(Swipe);
 Vue.use(SwipeItem);
 Vue.use(NavBar);
 Vue.use(Circle);
+Vue.use(Tab);
+Vue.use(Tabs);
+//引入请求js
+import mRequest from './network/cloudMusic';
+Vue.prototype.$request = mRequest;
 
 Vue.config.productionTip = false
 

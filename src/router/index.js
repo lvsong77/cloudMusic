@@ -17,13 +17,14 @@ const CMVillage = () => import('views/projects/cloudMusic/views/village/Village'
 const CMVideo = () => import('views/projects/cloudMusic/views/video/Video')
 
 const CMDailySongs = () => import('views/projects/cloudMusic/views/discovery/childComps/dailySongs/DailySongs')
+const  songSheet= () => import('views/projects/cloudMusic/views/discovery/childComps/songSheet/songSheet')
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '',
-    redirect: '/home',
+    redirect: '/projects/cloud_music/discovery',
   },
   {
     path: '/home',
@@ -77,6 +78,10 @@ const routes = [
           {
             path: 'daily_songs',
             component: CMDailySongs
+          },
+          {
+            path: 'song-sheet',
+            component: songSheet
           },
         ]
       }

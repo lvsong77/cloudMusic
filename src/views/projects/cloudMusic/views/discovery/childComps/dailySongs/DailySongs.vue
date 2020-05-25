@@ -9,7 +9,6 @@
   import DailySongsNavBar from './DailySongsNavBar'
   import PlayList from 'views/projects/cloudMusic/components/content/playList/PlayList'
 
-  import { getDailyRecommendSongs } from 'network/cloudMusic'
 
   export default {
     name: 'DailySongs',
@@ -32,7 +31,7 @@
       }
     },
     mounted () {
-      getDailyRecommendSongs().then(res => {
+      this.$request.getDailyRecommendSongs().then(res => {
         console.log(res);
         this.list = res.recommend
       })

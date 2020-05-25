@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import { getBanner, getPlayList } from 'network/cloudMusic'
+  // import { getBanner, getPlayList } from 'network/cloudMusic'
 
   import { judgeCurrentDivice } from 'common/utils'
 
@@ -38,7 +38,7 @@
       let params = {
         type
       }
-      getBanner(params).then(res => {
+      this.$request.getBanner(params).then(res => {
         for (const item of res.banners) {
           this.banners.push(item)
         }
